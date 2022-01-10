@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 77,
-                  "charOffset": 51,
+                  "charOffset": 52,
                   "snippet": {
                     "text": "If(chkReport.Value,\"Report\" in AssetType,AssetType in [\"Report\",\"Dashboard\"])"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 49,
+                  "charOffset": 50,
                   "snippet": {
                     "text": "&&"
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 128,
+                  "charOffset": 129,
                   "snippet": {
                     "text": "&&"
                   }
@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 213,
+                  "charOffset": 214,
                   "snippet": {
                     "text": "&&"
                   }
@@ -184,7 +184,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 307,
+                  "charOffset": 308,
                   "snippet": {
                     "text": "&&"
                   }
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 397,
+                  "charOffset": 398,
                   "snippet": {
                     "text": "&&"
                   }
@@ -264,7 +264,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 495,
+                  "charOffset": 496,
                   "snippet": {
                     "text": "&&"
                   }
@@ -708,156 +708,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.Icon6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.Icon6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.Icon6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.Icon6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.Icon4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.Icon4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.Icon4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.Icon4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.Icon4.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.Icon4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.ColumnChart1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.ColumnChart1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.ColumnChart1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2274,19 +2124,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SubCategoryPage.Image1_1.AccessibleLabel"
+                  "fullyQualifiedName": "ResourceDetail.Icon6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SubCategoryPage.Image1_1.AccessibleLabel",
+                  "fullyQualifiedName": "ResourceDetail.Icon6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SubCategoryPage",
-                "type": "SubCategoryPage.Image1_1"
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.Icon6"
               }
             }
           ],
@@ -2304,19 +2154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SubCategoryPage.Image1_1.TabIndex"
+                  "fullyQualifiedName": "ResourceDetail.Icon6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SubCategoryPage.Image1_1.TabIndex",
+                  "fullyQualifiedName": "ResourceDetail.Icon6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SubCategoryPage",
-                "type": "SubCategoryPage.Image1_1"
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.Icon6"
               }
             }
           ],
@@ -2328,6 +2178,96 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ResourceDetail.Icon4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ResourceDetail.Icon4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ResourceDetail.Icon4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ResourceDetail.Icon4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ResourceDetail.ColumnChart1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ResourceDetail.ColumnChart1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.ColumnChart1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2454,47 +2394,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.PowerBI_scalable"
+                  "fullyQualifiedName": "App.Group 27"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.PowerBI_scalable",
+                  "fullyQualifiedName": "App.Group 27",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "PowerBI_scalable",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.PowerApps_scalable"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.PowerApps_scalable",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "PowerApps_scalable",
+                "member": "Group 27",
                 "module": "App",
                 "type": "App"
               }
@@ -2544,47 +2454,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.bar graph"
+                  "fullyQualifiedName": "App.logo"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.bar graph",
+                  "fullyQualifiedName": "App.logo",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "bar graph",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.Group 27"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.Group 27",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Group 27",
+                "member": "logo",
                 "module": "App",
                 "type": "App"
               }
@@ -2634,6 +2514,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.PowerApps_scalable"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.PowerApps_scalable",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "PowerApps_scalable",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.PowerBI_scalable"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.PowerBI_scalable",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "PowerBI_scalable",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Sales_1"
                 }
               ],
@@ -2645,6 +2585,36 @@
               },
               "properties": {
                 "member": "Sales_1",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.WBA"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.WBA",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "WBA",
                 "module": "App",
                 "type": "App"
               }
@@ -2687,36 +2657,6 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ResourceDetail.Label18.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ResourceDetail.Label18.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "ResourceDetail",
-                "type": "ResourceDetail.Label18"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2843,19 +2783,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Button8_1.Width"
+                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Label13_1.X"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Button8_1.Width",
+                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Label13_1.X",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Width",
+                "member": "X",
                 "module": "Netflix Gallery",
-                "type": "Netflix Gallery.ChartGallery_1.Button8_1"
+                "type": "Netflix Gallery.ChartGallery_1.Label13_1"
               }
             }
           ],
@@ -2873,19 +2813,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Label13_1.X"
+                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Button8_1.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Label13_1.X",
+                  "fullyQualifiedName": "Netflix Gallery.ChartGallery_1.Button8_1.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "Width",
                 "module": "Netflix Gallery",
-                "type": "Netflix Gallery.ChartGallery_1.Label13_1"
+                "type": "Netflix Gallery.ChartGallery_1.Button8_1"
               }
             }
           ],
@@ -2976,6 +2916,36 @@
                 "member": "Item",
                 "module": "NewReport Page",
                 "type": "NewReport Page.frmNewReport"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ResourceDetail.Label18.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ResourceDetail.Label18.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "ResourceDetail",
+                "type": "ResourceDetail.Label18"
               }
             }
           ],

@@ -2676,7 +2676,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "",
     "Name": "cmbCreatedBy",
-    "ParentIndex": 5,
+    "ParentIndex": 6,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -3043,7 +3043,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "",
     "Name": "cmbTechnicalOwner",
-    "ParentIndex": 5,
+    "ParentIndex": 6,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -3407,7 +3407,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "",
     "Name": "ComboBox1",
-    "ParentIndex": 2,
+    "ParentIndex": 3,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -8379,7 +8379,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "%FieldValue.ID%",
     "Name": "DataCardValue11",
-    "ParentIndex": 3,
+    "ParentIndex": 2,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -8771,7 +8771,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "%FieldValue.ID%",
     "Name": "DataCardValue12",
-    "ParentIndex": 6,
+    "ParentIndex": 5,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -11152,7 +11152,7 @@
     "LayoutName": "",
     "MetaDataIDKey": "%FieldValue.ID%",
     "Name": "DataCardValue7",
-    "ParentIndex": 6,
+    "ParentIndex": 5,
     "PersistMetaDataIDKey": false,
     "Properties": [
       {
@@ -17738,7 +17738,14 @@
   "Image1_4": {
     "AllowAccessToGlobals": true,
     "ControlPropertyState": [
-      "Image",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "",
+        "InvariantPropertyName": "Image",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "ImagePosition",
       "ImageRotation",
       "X",

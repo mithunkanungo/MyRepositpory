@@ -78,7 +78,7 @@ ResourceDetail As screen:
         PaddingRight: =4.50
         PaddingTop: =4.50
         Size: =12.60
-        Text: ="Walgreens Boots Alliance"
+        Text: ="Contoso"
         Width: =234
         X: =62.98
         Y: =24
@@ -86,25 +86,13 @@ ResourceDetail As screen:
 
     Image1_2 As image:
         Height: =62
-        Image: =WBA
+        Image: ='bar graph'
         PaddingRight: =0.00
         PaddingTop: =0.00
         Width: =72.88
         X: =0.00
         Y: =7
         ZIndex: =20
-
-    Label4_1 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =34
-        PaddingRight: =4.50
-        PaddingTop: =4.50
-        Size: =17.99
-        Text: ="INSIGHTS CATALOG"
-        Width: =268.11
-        X: =296.00
-        Y: =21
-        ZIndex: =21
 
     Icon9_1 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)

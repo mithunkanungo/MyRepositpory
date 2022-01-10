@@ -54,13 +54,6 @@ SubCategoryPage As screen:
         Y: =235
         ZIndex: =4
 
-    Image1_1 As image:
-        Image: =logo
-        OnSelect: =Navigate(Home,ScreenTransition.Fade)
-        X: =21
-        Y: =15
-        ZIndex: =6
-
     Label5_1 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold

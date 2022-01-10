@@ -54,7 +54,7 @@
         PaddingRight: =4.50
         PaddingTop: =4.50
         Size: =12.60
-        Text: ="Walgreens Boots Alliance"
+        Text: ="Contoso"
         Width: =234
         X: =62
         Y: =24
@@ -62,7 +62,7 @@
 
     Image1_4 As image:
         Height: =62
-        Image: =WBA
+        Image: =
         PaddingRight: =0.00
         PaddingTop: =0.00
         Width: =72.88

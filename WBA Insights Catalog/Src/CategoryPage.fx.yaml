@@ -69,12 +69,6 @@ CategoryPage As screen:
         Y: =235
         ZIndex: =5
 
-    Image1 As image:
-        Image: =logo
-        X: =21
-        Y: =15
-        ZIndex: =6
-
     Label5 As label:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
