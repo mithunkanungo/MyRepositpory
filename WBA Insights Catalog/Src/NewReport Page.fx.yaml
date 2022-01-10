@@ -1,0 +1,1404 @@
+"'NewReport Page' As screen":
+    Fill: =RGBA(237, 237, 237, 1)
+    Height: |-
+        =//Max(App.Height, App.DesignHeight)
+        1660
+    ImagePosition: =ImagePosition.Fill
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_5 As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =83
+        Width: =Parent.Width
+        ZIndex: =1
+
+    ProfilePicture_3 As image:
+        Height: =71
+        Image: =User().Image
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =90
+        RadiusBottomRight: =90
+        RadiusTopLeft: =90
+        RadiusTopRight: =90
+        Width: =71
+        X: =Parent.Width-ProfilePicture_3.Width-10
+        Y: =5
+        ZIndex: =2
+
+    LblUserName_3 As label:
+        Align: =Right
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =35
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =10
+        Text: =User().FullName
+        Width: =194.34
+        X: =ProfilePicture_3.X-LblUserName_3.Width
+        Y: =21
+        ZIndex: =3
+
+    RctLogo_3 As rectangle:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =83
+        Width: =282.51
+        ZIndex: =4
+
+    Label2_4 As label:
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =12.60
+        Text: ="Contoso"
+        Width: =234
+        X: =62
+        Y: =24
+        ZIndex: =5
+
+    Image1_4 As image:
+        Height: =62
+        Image: =
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =72.88
+        Y: =5
+        ZIndex: =6
+
+    Label4_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =34
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =17.99
+        Text: =If(Text(frmNewReport.Mode)="1","New Report","Edit Report")
+        Width: =268.11
+        X: =296.00
+        Y: =21
+        ZIndex: =7
+
+    Icon9_3 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =37
+        Icon: =Icon.ChevronDown
+        Visible: =IsMenuVisible
+        Width: =24
+        X: =218
+        Y: =159
+        ZIndex: =8
+
+    Icon6_1 As icon.BackArrow:
+        Color: =RGBA(39, 113, 194, 1)
+        Height: =35
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Home,Fade)
+        Visible: =false
+        Width: =28
+        X: =324
+        Y: =93
+        ZIndex: =9
+
+    Label21_1 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =10
+        Text: ="Back"
+        Visible: =false
+        Width: =57
+        X: =351
+        Y: =92
+        ZIndex: =10
+
+    Rectangle2 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =68
+        Width: =1165
+        X: =34
+        Y: =128
+        ZIndex: =11
+
+    Label1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =47
+        Size: =16
+        Text: =If(Text(frmNewReport.Mode)="1","Create new Report","Edit Report")
+        Width: =293
+        X: =58
+        Y: =138
+        ZIndex: =12
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(48, 45, 45, 1)
+        Height: =2
+        Width: =1120
+        X: =60
+        Y: =190
+        ZIndex: =13
+
+    Label2 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =Semibold
+        Height: =20
+        Text: ="Back"
+        Width: =70
+        X: =67
+        Y: =100
+        ZIndex: =14
+
+    Icon5 As icon.ChevronLeft:
+        Height: =20
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back()
+        PaddingRight: =80
+        Width: =143
+        X: =25
+        Y: =100
+        ZIndex: =15
+
+    frmNewReport As form:
+        DataSource: =crfb2_Assets
+        Fill: |-
+            =//ColorValue("#F5F5F5")
+            ColorValue("#FFFFFF")
+        Height: =1434
+        Item: =ReportsGallery.Selected
+        NumberOfColumns: =2
+        OnSuccess: =Navigate(Home,ScreenTransition.Fade)
+        Width: =1165
+        X: =34
+        Y: =192
+        ZIndex: =16
+
+        Title_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Title"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =113
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_title")
+            Required: =false
+            Update: =DataCardValue9.Text
+            Width: =1160
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey10 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                Font: ="Roboto,Open Sans,Sogue UI"
+                FontWeight: =FontWeight.Semibold
+                Height: =36
+                Text: ="Report Display Name"//Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                TabIndex: =1
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                ZIndex: =2
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =DataCardKey10.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey10.Y
+                ZIndex: =4
+
+        "'Report Display Name_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_reportdisplayname"
+            Default: =ThisItem.'Report Display Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Report Display Name"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =110
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_reportdisplayname")
+            Required: =false
+            Update: =DataCardValue10.Text
+            Width: =1160
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey16 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: |-
+                    =//Parent.DisplayName
+                    "Report Name"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: |-
+                    =//Parent.DisplayMode.View
+                    If(IsBlank(DataCardValue10.Text) , Parent.DisplayMode.Edit ,Parent.DisplayMode.View)
+                Fill: =RGBA(237, 237, 237, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                TabIndex: =1
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 5
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue10.Y + DataCardValue10.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+        Description_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_description"
+            Default: =ThisItem.Description
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Description"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =0
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_description")
+            Required: =false
+            Update: =DataCardValue8.Text
+            Width: =1160
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey9 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =39
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =96
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                TabIndex: =2
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =57
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue8.Y + DataCardValue8.Height
+                ZIndex: =3
+
+            StarVisible8 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        AssetType_DataCard2 As typedDataCard.allowedValuesStringEditCard:
+            AllowedValues: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.AllowedValues, "crfb2_assettype")
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_assettype"
+            Default: =ThisItem.AssetType
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="AssetType"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue6.Selected.Value
+            Width: =590
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =Semibold
+                Height: =34
+                Text: ="Asset Type"//Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6 As dropdown:
+                AllowEmptySelection: =true
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                ChevronBackground: =RGBA(237, 237, 237, 1)
+                ChevronFill: =//RGBA(255, 255, 255, 1)
+                ChevronHoverBackground: =RGBA(237, 237, 237, 1)
+                ChevronHoverFill: =RGBA(237, 237, 237, 1)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                HoverFill: =RGBA(237, 237, 237, 1)
+                Items: =["Report","Dashboard"]
+                PressedBorderColor: =//Self.HoverBorderColor
+                PressedColor: =RGBA(0, 0, 0, 1)
+                PressedFill: =RGBA(237, 237, 237, 1)
+                SelectionColor: =RGBA(0, 0, 0, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =400
+                X: =30
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                ZIndex: =2
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =DataCardKey6.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+        "'Business Owner_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_businessowner"
+            Default: =ThisItem.'Business Owner'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Business Owner"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_businessowner")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Width: =550
+            X: =1
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =400
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =cmbBusinessOwner.Selected.DisplayName
+                DelayOutput: =true
+                Fill: =RGBA(237, 237, 237, 1)
+                HintText: ="Enter business owner"
+                MaxLength: =Parent.MaxLength
+                OnSelect: |-
+                    =UpdateContext({varEditBusinessOwner:!varEditBusinessOwner})
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =400
+                X: =94
+                Y: =49
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+            ImageBusinessOwner As image:
+                Height: =40
+                Image: |-
+                    =If(
+                        IsBlank(cmbBusinessOwner.Selected.DisplayName),
+                        'UserImage (1)',
+                        Office365Users.UserPhotoV2(cmbBusinessOwner.Selected.Id)
+                    )
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =5
+
+            Icon7 As icon.Edit:
+                Color: |-
+                    =ColorValue("#323264")
+                Height: =25
+                Icon: =If(varEditBusinessOwner,Icon.Cancel,Icon.Edit)
+                OnSelect: |-
+                    =UpdateContext({varEditBusinessOwner:!varEditBusinessOwner})
+                Visible: =false
+                Width: =25
+                X: =464
+                Y: =10
+                ZIndex: =6
+
+            cmbBusinessOwner As combobox:
+                BorderThickness: =0
+                ChevronBackground: |-
+                    =ColorValue("#323264")
+                DefaultSelectedItems: =
+                DisplayFields: =["DisplayName"]
+                FocusedBorderThickness: =0
+                InputTextPlaceholder: ="Enter name"
+                Items: |-
+                    =Office365Users.SearchUser({searchTerm:Self.SearchText,top:10})
+                OnSelect: |-
+                    =Set(varBuinessOwner,Self);UpdateContext({varEditBusinessOwner: false });
+                SearchFields: =["Mail"]
+                SearchItems: |-
+                    =Search(Office365Users.SearchUser({searchTerm:Self.SearchText,top:10}),cmbBusinessOwner.SearchText,"Mail")
+                SelectMultiple: =false
+                Visible: =varEditBusinessOwner
+                Width: =400
+                X: =94
+                Y: =48
+                ZIndex: =7
+
+            btnBusinessOwnerInitials As button:
+                Fill: =RGBA(0, 18, 107, 1)
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90  
+                Text: |-
+                    =//"Button"
+                    Concatenate(
+                                Left(cmbBusinessOwner.Selected.GivenName, 1),
+                                Left(cmbBusinessOwner.Selected.Surname, 1))
+                Visible: |
+                    =//!Office365Users.UserPhotoMetadata(cmbBusinessOwner.Selected.Id).HasPhoto
+                    //true
+                    
+                    If(
+                        IsBlank(cmbBusinessOwner.Selected.DisplayName),
+                        false,
+                       !Office365Users.UserPhotoMetadata(cmbBusinessOwner.Selected.Id).HasPhoto)
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =8
+
+        Departments_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_departments"
+            Default: =ThisItem.Departments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Departments"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_departments")
+            Required: =false
+            Update: =DataCardValue3.Selected.Value
+            Width: =590
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+            DataCardValue3 As combobox:
+                BorderThickness: =0
+                ChevronBackground: =RGBA(237, 237, 237, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                DisplayFields: =["Value"]
+                Fill: =RGBA(237, 237, 237, 1)
+                Items: =["Finance","Sales","Marketing","HR"]
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Finance","Sales","Marketing","HR"],DataCardValue3.SearchText,"Value")
+                Width: =400
+                X: =30
+                Y: =50
+                ZIndex: =5
+
+        "'Technical Owner_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_technicalowner"
+            Default: =ThisItem.'Technical Owner'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Technical Owner"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_technicalowner")
+            Required: =false
+            Update: =DataCardValue7.Text
+            Width: =550
+            X: =1
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =400
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |-
+                    =//Office365Users.SearchUser({searchTerm:DataCardValue7.Text,top:10})
+                    //Parent.Default
+                    //User().FullName
+                    cmbTechnicalOwner.Selected.DisplayName
+                DelayOutput: =true
+                Fill: =RGBA(237, 237, 237, 1)
+                HintText: ="Enter owner's name"
+                MaxLength: =Parent.MaxLength
+                OnSelect: |-
+                    =UpdateContext({varEditTechnicalOwner:!varEditTechnicalOwner})
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =400
+                X: =94
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =DataCardKey7.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+            ImageBusinessOwner_1 As image:
+                Height: =40
+                Image: |
+                    =
+                    If(
+                        IsBlank(cmbTechnicalOwner.Selected.DisplayName),
+                        'UserImage (1)',
+                    Office365Users.UserPhotoV2(cmbTechnicalOwner.Selected.Id))
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =5
+
+            Icon7_1 As icon.Edit:
+                Color: |-
+                    =ColorValue("#323264")
+                Height: =25
+                Icon: =If(varEditTechnicalOwner,Icon.Cancel,Icon.Edit)
+                OnSelect: |-
+                    =UpdateContext({varEditTechnicalOwner:!varEditTechnicalOwner})
+                Visible: =false
+                Width: =25
+                X: =464
+                Y: =10
+                ZIndex: =6
+
+            cmbTechnicalOwner As combobox:
+                BorderThickness: =0
+                ChevronBackground: |-
+                    =ColorValue("#323264")
+                DisplayFields: =["DisplayName"]
+                Fill: =RGBA(237, 237, 237, 1)
+                FocusedBorderThickness: =0
+                InputTextPlaceholder: ="Enter name"
+                Items: |-
+                    =Office365Users.SearchUser({searchTerm:Self.SearchText,top:10})
+                OnSelect: |
+                    =Set(varBuinessOwner, Self);UpdateContext({varEditTechnicalOwner:false})
+                SearchFields: =["Mail"]
+                SearchItems: |-
+                    =Search(Office365Users.SearchUser({searchTerm:Self.SearchText,top:10}),cmbTechnicalOwner.SearchText,"Mail")
+                SelectMultiple: =false
+                Visible: =varEditTechnicalOwner
+                Width: =400
+                X: =94
+                Y: =48
+                ZIndex: =7
+
+            btnTechnicalOwnerInitials As button:
+                Fill: =RGBA(0, 18, 107, 1)
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90  
+                Text: |-
+                    =//"Button"
+                    Concatenate(
+                                Left(cmbTechnicalOwner.Selected.GivenName, 1),
+                                Left(cmbTechnicalOwner.Selected.Surname, 1))
+                Visible: |
+                    =//!Office365Users.UserPhotoMetadata(cmbTechnicalOwner.Selected.Id).HasPhoto
+                    //true
+                    If(
+                        IsBlank(cmbTechnicalOwner.Selected.DisplayName),
+                        false,
+                       !Office365Users.UserPhotoMetadata(cmbTechnicalOwner.Selected.Id).HasPhoto)
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =8
+
+        "'Sensitivity Level_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_sensitivitylevel"
+            Default: =ThisItem.'Sensitivity Level'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Sensitivity Level"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_sensitivitylevel")
+            Required: =false
+            Update: =DataCardValue1.Selected.Value
+            Width: =590
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+            DataCardValue1 As combobox:
+                BorderThickness: =0
+                ChevronBackground: =RGBA(237, 237, 237, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                DisplayFields: =["Value"]
+                Fill: =RGBA(237, 237, 237, 1)
+                Items: =["Public","Private","Internal","Confidential","Highly Confidential"]
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Public","Private","Internal","Confidential","Highly Confidential"],DataCardValue1.SearchText,"Value")
+                Width: =400
+                X: =30
+                Y: =50
+                ZIndex: =5
+
+        "'Report Created By_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_reportcreatedby"
+            Default: =ThisItem.'Report Created By'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Report Created By"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_reportcreatedby")
+            Required: =false
+            Update: =DataCardValue12.Text
+            Width: =550
+            X: =1
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                Font: =Font.'Segoe UI'
+                FontWeight: =Semibold
+                Height: =34
+                Text: ="Created By"//Parent.DisplayName
+                Width: =400
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =cmbCreatedBy.Selected.DisplayName
+                DelayOutput: =true
+                Fill: =RGBA(237, 237, 237, 1)
+                HintText: ="Enter name"
+                MaxLength: =Parent.MaxLength
+                OnSelect: |-
+                    =UpdateContext({varEditCreatedBy:!varEditCreatedBy})
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =400
+                X: =94
+                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey12.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey12.Y
+                ZIndex: =4
+
+            ImageBusinessOwner_2 As image:
+                Height: =40
+                Image: |-
+                    =If(
+                        IsBlank(cmbCreatedBy.Selected.DisplayName),
+                        'UserImage (1)',
+                        Office365Users.UserPhotoV2(cmbCreatedBy.Selected.Id)
+                    )
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =5
+
+            Icon7_2 As icon.Edit:
+                Color: |-
+                    =ColorValue("#323264")
+                Height: =25
+                Icon: =If(varEditCreatedBy,Icon.Cancel,Icon.Edit)
+                OnSelect: |-
+                    =UpdateContext({varEditCreatedBy:!varEditCreatedBy})
+                Visible: =false
+                Width: =25
+                X: =464
+                Y: =10
+                ZIndex: =6
+
+            cmbCreatedBy As combobox:
+                BorderThickness: =0
+                ChevronBackground: |-
+                    =ColorValue("#323264")
+                DisplayFields: =["DisplayName"]
+                FocusedBorderThickness: =0
+                InputTextPlaceholder: ="Enter name"
+                Items: |-
+                    =Office365Users.SearchUser({searchTerm:Self.SearchText,top:10})
+                OnSelect: |
+                    =Set(varBuinessOwner, Self);UpdateContext({varEditCreatedBy:false})
+                SearchFields: =["Mail"]
+                SearchItems: |-
+                    =Search(Office365Users.SearchUser({searchTerm:Self.SearchText,top:10}),cmbCreatedBy.SearchText,"Mail")
+                SelectMultiple: =false
+                Visible: =varEditCreatedBy
+                Width: =400
+                X: =95
+                Y: =48
+                ZIndex: =7
+
+            btnCreatedByInitials As button:
+                Fill: =RGBA(0, 18, 107, 1)
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90  
+                Text: |-
+                    =//"Button"
+                    Concatenate(
+                                Left(cmbCreatedBy.Selected.GivenName, 1),
+                                Left(cmbCreatedBy.Selected.Surname, 1))
+                Visible: |
+                    =//!Office365Users.UserPhotoMetadata(cmbCreatedBy.Selected.Id).HasPhoto
+                    //true
+                    If(
+                        IsBlank(cmbCreatedBy.Selected.DisplayName),
+                        false,
+                       !Office365Users.UserPhotoMetadata(cmbCreatedBy.Selected.Id).HasPhoto)
+                Width: =40
+                X: =30
+                Y: =48
+                ZIndex: =8
+
+        "'Execution Mode_DataCard1' As typedDataCard.comboBoxOptionSetMultiEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_executionmode"
+            Default: =ThisItem.'Execution Mode'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Execution Mode"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue5.SelectedItems.Value
+            Width: =590
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: |-
+                    =//Parent.DisplayName
+                    "Refresh Mode"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =25
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                ChevronBackground: =RGBA(237, 237, 237, 1)
+                ChevronFill: =RGBA(0, 0, 0, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                FocusedBorderThickness: =0
+                IsSearchable: =false
+                Items: =["Automated","Manual"]
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =400
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+        "'Web Link_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_weblink"
+            Default: =ThisItem.'Web Link'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Web Link"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@crfb2_Assets], DataSourceInfo.MaxLength, "crfb2_weblink")
+            Required: =false
+            Update: =DataCardValue13.Text
+            Width: =1160
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue13 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Color: =RGBA(39, 113, 194, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                MaxLength: =Parent.MaxLength
+                OnSelect: =Launch(DataCardValue13.Text)
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Underline: =true
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                ZIndex: =2
+
+            ErrorMessage13 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue13.Y + DataCardValue13.Height
+                ZIndex: =3
+
+            StarVisible13 As label:
+                Align: =Align.Center
+                Height: =DataCardKey13.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey13.Y
+                ZIndex: =4
+
+        Tags_DataCard1 As typedDataCard.textualMultiLineEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_tags"
+            Default: =ThisItem.Tags
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Tags"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue11.Text
+            Width: =1160
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey11 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue11 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                HintText: ="Enter few keywords"
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                ZIndex: =2
+
+            ErrorMessage11 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue11.Y + DataCardValue11.Height
+                ZIndex: =3
+
+            StarVisible11 As label:
+                Align: =Align.Center
+                Height: =DataCardKey11.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey11.Y
+                ZIndex: =4
+
+            ComboBox1 As combobox:
+                BorderThickness: =0
+                ChevronBackground: =RGBA(237, 237, 237, 1)
+                ChevronFill: =//RGBA(0, 0, 0, 1)
+                DisplayFields: =["Value"]
+                Fill: =RGBA(237, 237, 237, 1)
+                HoverFill: |-
+                    =//RGBA(186, 202, 226, 1)
+                    RGBA(237,237,237,100)
+                IsSearchable: =false
+                Items: |-
+                    =//ComboBoxSample
+                    ["Finance","Sales","Audit","Purchase","Marketing","Power BI","Retail"]
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                Width: =1100
+                X: =30
+                Y: =48
+                ZIndex: =5
+
+        Images1_DataCard2 As typedDataCard.addLargePictureCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crfb2_images1"
+            Default: =ThisItem.Images1
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Images1"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =240
+            Required: =false
+            Update: =Image5.Image
+            Width: =1160
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: |-
+                    =//Parent.DisplayName
+                    "Image"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            Image5 As image:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(237, 237, 237, 1)
+                Height: =165
+                Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
+                Tooltip: =Parent.DisplayName
+                Width: =AddPicture2.Width
+                X: =AddPicture2.X
+                Y: =AddPicture2.Y
+                ZIndex: =2
+
+            AddPicture2 As addMedia:
+                Height: =200
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                ZIndex: =3
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Image5.Y + Image5.Height
+                ZIndex: =4
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey14.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =5
+
+    btnSave As button:
+        Fill: |-
+            =ColorValue("#323264")
+        Font: =Font.'Segoe UI'
+        Height: =38
+        OnSelect: =SubmitForm(frmNewReport)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Text: =If(Text(frmNewReport.Mode)="1","Submit","Save")
+        Width: =158
+        X: =999
+        Y: =1565
+        ZIndex: =17
+
+    Button3 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =38
+        HoverBorderColor: |-
+            =ColorValue("#323264")
+        HoverColor: |-
+            =ColorValue("#323264")
+        HoverFill: |-
+            =//ColorFade(ColorValue("#323264"), -20%)
+        OnSelect: =ResetForm(frmNewReport);Back()
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Text: ="Discard"
+        Width: =158
+        X: =819
+        Y: =1565
+        ZIndex: =18
+

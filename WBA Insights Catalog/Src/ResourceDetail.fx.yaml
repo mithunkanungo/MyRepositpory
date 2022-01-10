@@ -1,0 +1,653 @@
+ResourceDetail As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    Height: =Max(App.Height, App.DesignHeight)
+    ImagePosition: =ImagePosition.Fill
+    Width: =Max(App.Width, App.DesignWidth)
+
+    Rectangle1_4 As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =83
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Label1_6 As label:
+        Align: =Left
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =16
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =9.90
+        Text: ="Recent Activity"
+        Width: =134.96
+        X: =200.63
+        Y: =91
+        ZIndex: =2
+
+    Label1_7 As label:
+        Align: =Left
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =16
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =9.90
+        Text: ="Trending"
+        Width: =134.96
+        X: =200.63
+        Y: =163
+        ZIndex: =3
+
+    ProfilePicture_1 As image:
+        Height: =75
+        Image: =User().Image
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =90
+        RadiusBottomRight: =90
+        RadiusTopLeft: =90
+        RadiusTopRight: =90
+        Width: =71
+        X: =Parent.Width-ProfilePicture_1.Width-10
+        Y: =5
+        ZIndex: =7
+
+    LblUserName_1 As label:
+        Align: =Right
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =35
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =10
+        Text: =User().FullName
+        Width: =194.34
+        X: =ProfilePicture_1.X-LblUserName_1.Width
+        Y: =21
+        ZIndex: =8
+
+    RctLogo_1 As rectangle:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =83
+        Width: =282.51
+        ZIndex: =17
+
+    Label2_2 As label:
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =12.60
+        Text: ="Contoso"
+        Width: =234
+        X: =62.98
+        Y: =24
+        ZIndex: =19
+
+    Image1_2 As image:
+        Height: =62
+        Image: ='bar graph'
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =72.88
+        X: =0.00
+        Y: =7
+        ZIndex: =20
+
+    Icon9_1 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =37
+        Icon: =Icon.ChevronDown
+        Visible: =IsMenuVisible
+        Width: =24
+        X: =218
+        Y: =159
+        ZIndex: =27
+
+    Label13_6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Bold
+        Height: =42
+        Size: =10
+        Text: ="New Reports this month"
+        Width: =176
+        X: =835
+        Y: =79
+        ZIndex: =63
+
+    Label13_9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Bold
+        Height: =19
+        Size: =10
+        Text: ="New Reports this year"
+        Width: =160
+        X: =1010
+        Y: =89
+        ZIndex: =64
+
+    Label14_7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =23
+        Size: =8
+        Text: ="1050"
+        Width: =61
+        X: =347
+        Y: =109
+        ZIndex: =65
+
+    Label14_5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =23
+        Size: =8
+        Text: ="50"
+        Width: =61
+        X: =722
+        Y: =106
+        ZIndex: =67
+
+    Label14_9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =22
+        Size: =8
+        Text: ="40"
+        Width: =38
+        X: =1060
+        Y: =110
+        ZIndex: =69
+
+    Rectangle14 As rectangle:
+        Fill: |-
+            =ColorValue("#F5F5F5")
+        Height: =662
+        Width: =282
+        X: =5
+        Y: =106
+        ZIndex: =70
+
+    Label10 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        Text: ="Trending"
+        X: =10
+        Y: =127
+        ZIndex: =71
+
+    Label15 As label:
+        Font: =Font.'Segoe UI'
+        Height: =28
+        LineHeight: =1.5
+        Size: =10
+        Text: ="Number of People Viewed"
+        Width: =250
+        X: =10
+        Y: =180
+        ZIndex: =72
+
+    Rectangle8 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =15
+        Width: =112
+        X: =10
+        Y: =210
+        ZIndex: =73
+
+    Rectangle8_1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =15
+        Width: =60
+        X: =115
+        Y: =210
+        ZIndex: =74
+
+    Label15_1 As label:
+        Font: =Font.'Segoe UI'
+        Height: =27
+        LineHeight: =1.5
+        Size: =10
+        Text: ="Number of times opened "
+        Width: =236
+        X: =10
+        Y: =242
+        ZIndex: =75
+
+    Rectangle8_2 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =15
+        Width: =172
+        X: =10
+        Y: =272
+        ZIndex: =76
+
+    Rectangle8_3 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =15
+        Width: =112
+        X: =380
+        Y: =278
+        ZIndex: =77
+
+    Rectangle8_4 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =15
+        Width: =90
+        X: =8
+        Y: =377
+        ZIndex: =79
+
+    Rectangle8_5 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =15
+        Width: =75
+        X: =95
+        Y: =377
+        ZIndex: =80
+
+    Label15_3 As label:
+        Font: =Font.'Segoe UI'
+        Height: =24
+        Size: =10
+        Text: ="Usage over last year"
+        Width: =186
+        X: =10
+        Y: =408
+        ZIndex: =81
+
+    Rectangle8_6 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =15
+        Width: =100
+        X: =8
+        Y: =438
+        ZIndex: =82
+
+    Rectangle8_7 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =15
+        Width: =60
+        X: =105
+        Y: =438
+        ZIndex: =83
+
+    Label15_4 As label:
+        Font: =Font.'Segoe UI'
+        Height: =24
+        Size: =10
+        Text: ="Usage over last month"
+        Width: =208
+        X: =8
+        Y: =349
+        ZIndex: =84
+
+    Rectangle8_8 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =15
+        Width: =60
+        X: =10
+        Y: =324
+        ZIndex: =85
+
+    Rectangle8_9 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =14
+        Width: =118
+        X: =70
+        Y: =324
+        ZIndex: =86
+
+    Label16 As label:
+        Height: =28
+        Size: =8
+        Text: ="1000"
+        Width: =59
+        X: =196
+        Y: =203
+        ZIndex: =87
+
+    Label16_1 As label:
+        Height: =28
+        Size: =8
+        Text: ="1500"
+        Width: =59
+        X: =196
+        Y: =267
+        ZIndex: =88
+
+    Label15_5 As label:
+        Font: =Font.'Segoe UI'
+        Height: =26
+        Size: =10
+        Text: ="Usage over last week"
+        Width: =228
+        X: =10
+        Y: =294
+        ZIndex: =89
+
+    Rectangle9 As rectangle:
+        Fill: =RGBA(142, 151, 173, 1)
+        Height: =3
+        Width: =272
+        X: =10
+        Y: =478
+        ZIndex: =90
+
+    Label10_1 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        Text: ="Tags"
+        X: =10
+        Y: =493
+        ZIndex: =91
+
+    Button1 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="Finance"
+        Width: =77
+        X: =10
+        Y: =537
+        ZIndex: =92
+
+    Button1_1 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="Credit"
+        Width: =77
+        X: =98
+        Y: =537
+        ZIndex: =93
+
+    Button1_2 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="Revenue"
+        Width: =77
+        X: =10
+        Y: =593
+        ZIndex: =94
+
+    Rectangle9_1 As rectangle:
+        Fill: =RGBA(156, 167, 186, 1)
+        Height: =3
+        Width: =272
+        X: =10
+        Y: =651
+        ZIndex: =96
+
+    Label10_2 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Text: ="Document History"
+        Width: =206
+        X: =12
+        Y: =654
+        ZIndex: =97
+
+    Button1_3 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="Anual"
+        Width: =77
+        X: =98
+        Y: =593
+        ZIndex: =98
+
+    Label18 As label:
+        Color: =RGBA(50, 69, 97, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =20
+        Text: =ReportsGallery.Selected.Title
+        Width: =492
+        X: =313
+        Y: =163
+        ZIndex: =100
+
+    Label19 As label:
+        Font: =Font.'Segoe UI'
+        Height: =100
+        Size: =12
+        Text: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        Width: =Parent.Width - 350  
+        X: =319
+        Y: =203
+        ZIndex: =101
+
+    ColumnChart1 As barChart:
+        Height: =271
+        Items: |
+            =ColumnChartSample
+        Width: =407
+        X: =285
+        Y: =292
+        ZIndex: =104
+
+    Label19_1 As label:
+        Font: =Font.'Segoe UI'
+        Height: =130
+        Size: =12
+        Text: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        Width: =Parent.Width - 350  
+        X: =319
+        Y: =592
+        ZIndex: =106
+
+    Label16_2 As label:
+        Height: =28
+        Size: =8
+        Text: ="30"
+        Width: =59
+        X: =196
+        Y: =319
+        ZIndex: =107
+
+    Label16_3 As label:
+        Height: =28
+        Size: =8
+        Text: ="80"
+        Width: =59
+        X: =196
+        Y: =371
+        ZIndex: =108
+
+    Label16_4 As label:
+        Height: =28
+        Size: =8
+        Text: ="1000"
+        Width: =59
+        X: =196
+        Y: =433
+        ZIndex: =109
+
+    LineChart1 As lineChart:
+        Font: =Font.'Open Sans'
+        Height: =225
+        Items: =LineChartSample
+        Width: =428
+        X: =787
+        Y: =320
+        ZIndex: =112
+
+    Icon3 As icon.Print:
+        Color: =RGBA(39, 113, 194, 1)
+        Height: =35
+        Icon: =Icon.Print
+        Width: =28
+        X: =1140
+        Y: =100
+        ZIndex: =113
+
+    Label20 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        Size: =10
+        Text: ="Print"
+        Underline: =true
+        Width: =48
+        X: =1169
+        Y: =93
+        ZIndex: =114
+
+    Icon6 As icon.BackArrow:
+        Color: =RGBA(39, 113, 194, 1)
+        Height: =35
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Home,Fade)
+        Width: =28
+        X: =324
+        Y: =93
+        ZIndex: =115
+
+    Label21 As label:
+        Color: =RGBA(39, 113, 194, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =10
+        Text: ="Back"
+        Width: =57
+        X: =351
+        Y: =92
+        ZIndex: =116
+
+    Rectangle13 As rectangle:
+        Fill: =RGBA(221, 226, 237, 1)
+        Height: =5
+        Width: =Parent.Width - 350 
+        X: =313
+        Y: =142
+        ZIndex: =117
+
+    Label22 As label:
+        Text: =User().FullName
+        Width: =194
+        X: =73
+        Y: =716
+        ZIndex: =119
+
+    Label23 As label:
+        Height: =22
+        Size: =10
+        Text: |-
+            ="Created By :"
+        Width: =180
+        X: =26
+        Y: =691
+        ZIndex: =120
+
+    Button1_4 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="APAC"
+        Width: =77
+        X: =188
+        Y: =537
+        ZIndex: =121
+
+    Button1_5 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =30
+        RadiusBottomLeft: =20  
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =10
+        Text: ="2022"
+        Width: =77
+        X: =188
+        Y: =593
+        ZIndex: =122
+
+    Image3 As image:
+        Height: =40
+        Image: =User().Image
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
+        Width: =40
+        X: =26
+        Y: =716
+        ZIndex: =123
+
+    Icon4 As icon.Edit:
+        Height: =35
+        Icon: =Icon.Edit
+        OnSelect: =EditForm(frmNewReport);Navigate('NewReport Page',ScreenTransition.Fade)
+        Tooltip: ="Edit"
+        Visible: =false
+        Width: =35
+        X: =913
+        Y: =97
+        ZIndex: =124
+
+    Button4 As button:
+        BorderThickness: =0
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =20
+        HoverFill: =RGBA(39, 113, 194, 1)
+        OnSelect: =EditForm(frmNewReport);Navigate('NewReport Page',ScreenTransition.Fade)
+        Size: =12
+        Text: ="Edit"
+        Underline: =true
+        Width: =59
+        X: =1059
+        Y: =108
+        ZIndex: =125
+
+    Button4_1 As button:
+        BorderThickness: =0
+        Color: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =19
+        HoverFill: =RGBA(39, 113, 194, 1)
+        OnSelect: |+
+            =NewForm(frmNewReport);Navigate('NewReport Page',ScreenTransition.Fade)
+            //Navigate('NewReport Page',ScreenTransition.Fade)
+            
+        Size: =12
+        Text: ="New Report Metadata"
+        Underline: =true
+        Visible: =false
+        Width: =200
+        X: =859
+        Y: =109
+        ZIndex: =126
+

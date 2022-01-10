@@ -1,0 +1,625 @@
+Home As screen:
+    Fill: =
+    Height: =Max(App.Height, App.DesignHeight)
+    ImagePosition: =ImagePosition.Fill
+    Width: =Max(App.Width, App.DesignWidth)
+
+    RctHeader As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =83
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Label1_5 As label:
+        Align: =Left
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =16
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =9.90
+        Text: ="You may be interested in"
+        Width: =215.93
+        X: =200.63
+        Y: =279
+        ZIndex: =2
+
+    ProfilePicture As image:
+        Height: =75
+        Image: =User().Image
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        RadiusBottomLeft: =90
+        RadiusBottomRight: =90
+        RadiusTopLeft: =90
+        RadiusTopRight: =90
+        Width: =71
+        X: =Parent.Width-ProfilePicture.Width-10
+        Y: =5
+        ZIndex: =3
+
+    LblUserName As label:
+        Align: =Right
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =Semibold
+        Height: =35
+        OnSelect: =Navigate('Netflix Gallery',ScreenTransition.Fade)
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =10
+        Text: =User().FullName
+        Width: =194.34
+        X: =ProfilePicture.X-LblUserName.Width
+        Y: =25
+        ZIndex: =4
+
+    TxtSearch As text:
+        Default: =""
+        Height: =49
+        HintText: ="Search"
+        LineHeight: =1
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Size: =11.70
+        Width: =438.16
+        X: =LblUserName.X-TxtSearch.Width
+        Y: =18
+        ZIndex: =5
+
+    Icon1_1 As icon.Search:
+        Height: =30
+        Icon: =Icon.Search
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =26.09
+        X: =LblUserName.X-30
+        Y: =28
+        ZIndex: =6
+
+    RctFooter As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =8
+        Width: =Parent.Width
+        X: =0.00
+        Y: =Parent.Height-10
+        ZIndex: =7
+
+    "ReportsGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =Parent.Height-(RctHeader.Height+ChartGallery.Height+RctFooter.Height)-10
+        Items: |+
+            =
+            Sort(Filter(crfb2_Assets,TxtSearch.Text in Title&&If(chkReport.Value,"Report" in AssetType,AssetType in ["Report","Dashboard"])&&If(chkDashBoard.Value,"Dashboard" in AssetType,AssetType in ["Report","Dashboard"])&&If(chkFinance.Value,"Finance" in Departments,Departments in ["Finance","Sales","Marketing"])&&If(chkSales.Value,"Sales" in Departments,Departments in ["Finance","Sales","Marketing"])&&If(chkMarketing.Value,"Marketing" in Departments,Departments in ["Finance","Sales","Marketing"])&&If(chkPublic.Value,"Public" in Sensitivity,Sensitivity in ["Public","General","Confidential","Highly Confidential"])),'Created On',Descending)
+            
+            
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ResourceDetail,ScreenTransition.Fade)
+        ShowNavigation: =true
+        TemplateFill: |-
+            =RGBA(255, 255, 255, 1 )
+            //RGBA(0, 18, 107, 1)
+        TemplatePadding: =15
+        TemplateSize: =300
+        Transition: =Transition.Pop
+        Width: =Parent.Width-MenuBar.Width-50
+        WrapCount: =6
+        X: =282
+        Y: =205
+        ZIndex: =8
+
+        Rectangle5 As rectangle:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =146
+            OnSelect: =Select(Parent)
+            Width: =ReportsGallery.TemplateWidth-10
+            X: =5
+            Y: =7
+            ZIndex: =1
+
+        FooterHighlight As rectangle:
+            Height: =7
+            OnSelect: =Select(Parent)
+            Width: =ReportsGallery.TemplateWidth
+            X: =0.18
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =2
+
+        ReportImage As image:
+            Height: =150
+            Image: |-
+                =If(ThisItem.Images="Group 25", 'Group 25',
+                If(ThisItem.Images="Group 60",'Group 60',
+                If(ThisItem.Images="Group 29", 'Group 29',
+                If(ThisItem.Images="Group 63", 'Group 25',
+                If(ThisItem.Images="Group 72", 'Group 72',
+                'Group 4')))))
+            OnSelect: =Select(Parent)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =107.07
+            X: =(ReportsGallery.TemplateWidth / 2) - (ReportImage.Width / 2)
+            Y: =(ReportsGallery.TemplateHeight / 2) - (ReportImage.Height / 2)-50
+            ZIndex: =3
+
+        LblDescription As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            Height: =35
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Size: =10.80
+            Text: =ThisItem.Description
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130.298
+            X: =14
+            Y: =225
+            ZIndex: =4
+
+        RtReportRating As rating:
+            Default: =ThisItem.Ratings
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Edit
+            FocusedBorderColor: =Self.BorderColor
+            Height: =24
+            HoverFill: =Self.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =Self.Fill
+            RatingFill: =RGBA(255, 191, 0, 1)
+            Width: =70
+            X: =12
+            Y: =272
+            ZIndex: =5
+
+        LblReportTitle As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =37
+            OnSelect: =Select(Parent)
+            PaddingRight: =4.50
+            PaddingTop: =4.50
+            Size: =14
+            Text: =ThisItem.Title
+            Width: =167.8
+            X: =10
+            Y: =194
+            ZIndex: =6
+
+        lblNumberOfViews As label:
+            Align: =Right
+            Height: =12
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Views
+            Width: =36
+            X: =(ReportsGallery.TemplateWidth / 2) - (ReportImage.Width / 2)+105
+            Y: =281
+            ZIndex: =7
+
+        IcoViewReport As icon.View:
+            Color: =RGBA(39, 113, 194, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =10
+            Icon: =Icon.View
+            OnSelect: =Select(Parent)
+            Width: =33
+            X: =(ReportsGallery.TemplateWidth / 2) - (ReportImage.Width / 2)+140
+            Y: =283
+            ZIndex: =8
+
+        Icon1 As icon.OpenInNewWindow:
+            Height: =60
+            Icon: =Icon.OpenInNewWindow
+            OnSelect: |-
+                =Launch("https://app.powerbi.com/groups/me/reports/a950a3b5-fd14-4f7f-b0bd-a085663340e4/ReportSection?ctid=bb15934e-b513-4dc7-bcf2-ccb2527e1c1b")
+            Width: =21
+            X: =89
+            Y: =255
+            ZIndex: =9
+
+    RctLogo As rectangle:
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =83
+        Width: =282.51
+        X: =0.00
+        ZIndex: =9
+
+    MenuBar As rectangle:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =1
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =720
+        Visible: =IsMenuVisible
+        Width: =RctLogo.Width
+        Y: =82
+        ZIndex: =13
+
+    chkReport As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Report"
+        X: =49
+        Y: =198
+        ZIndex: =14
+
+    chkDashBoard As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Dashboard"
+        X: =49
+        Y: =223
+        ZIndex: =15
+
+    chkFinance As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Finance"
+        X: =49
+        Y: =303
+        ZIndex: =16
+
+    chkSales As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Sales"
+        X: =49
+        Y: =325
+        ZIndex: =17
+
+    chkMarketing As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Marketing"
+        X: =49
+        Y: =348
+        ZIndex: =18
+
+    chkPublic As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Public"
+        X: =49
+        Y: =420
+        ZIndex: =19
+
+    Label9 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =15
+        Size: =10
+        Text: ="Asset Type"
+        X: =49
+        Y: =172
+        ZIndex: =20
+
+    Label12 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =16
+        Size: =10
+        Text: ="Department"
+        X: =49
+        Y: =276
+        ZIndex: =21
+
+    Rectangle3 As rectangle:
+        Height: =1
+        X: =49
+        Y: =190
+        ZIndex: =22
+
+    Rectangle3_1 As rectangle:
+        Height: =1
+        X: =49
+        Y: =293
+        ZIndex: =23
+
+    Label9_1 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =15
+        Size: =10
+        Text: ="Sensitivity"
+        X: =49
+        Y: =391
+        ZIndex: =24
+
+    Checkbox8_1 As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="General"
+        X: =49
+        Y: =440
+        ZIndex: =25
+
+    Checkbox8_2 As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Confidential"
+        X: =49
+        Y: =460
+        ZIndex: =26
+
+    Checkbox8_3 As checkbox:
+        CheckboxSize: =20
+        Height: =20
+        Size: =10
+        Text: ="Highly Confidential"
+        X: =49
+        Y: =480
+        ZIndex: =27
+
+    Rectangle3_2 As rectangle:
+        Height: =1
+        X: =49
+        Y: =408
+        ZIndex: =28
+
+    DatePicker1 As datepicker:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Height: =28
+        PaddingLeft: =5
+        PaddingRight: =0
+        Size: =10
+        Width: =150
+        X: =40  
+        Y: =637
+        ZIndex: =29
+
+    Label12_1 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =16
+        Size: =10
+        Text: ="Created on or After"
+        X: =40
+        Y: =610 
+        ZIndex: =30
+
+    Rectangle3_4 As rectangle:
+        Height: =1
+        X: =40
+        Y: =625
+        ZIndex: =31
+
+    Rectangle11 As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =60
+        Width: =179
+        X: =40
+        Y: =526
+        ZIndex: =32
+
+    LblRating As label:
+        Color: |-
+            =ColorValue("#55AEE0")
+        FontWeight: =FontWeight.Semibold
+        Height: =15
+        Size: =10
+        Text: ="Rating"
+        X: =56
+        Y: =537
+        ZIndex: =33
+
+    RatingFilter As rating:
+        Default: =1
+        DisabledFill: =Self.Fill
+        DisplayMode: =DisplayMode.Edit
+        FocusedBorderColor: =Self.BorderColor
+        Height: =18
+        HoverFill: =Self.Fill
+        PressedFill: =Self.Fill
+        RatingFill: =RGBA(255, 191, 0, 1)
+        Width: =167
+        X: =49
+        Y: =560
+        ZIndex: =34
+
+    Button2 As button:
+        DisplayMode: =DisplayMode.View
+        Fill: |-
+            =ColorValue("#323264")
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Text: =""
+        Width: =260
+        X: =11
+        Y: =101
+        ZIndex: =35
+
+    Icon9 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =37
+        Icon: =Icon.ChevronDown
+        Visible: =IsMenuVisible
+        Width: =24
+        X: =227
+        Y: =103
+        ZIndex: =36
+
+    lblFilters As label:
+        Color: =RGBA(85, 174, 224, 1)
+        Font: =Font.'Segoe UI'
+        Height: =29
+        Size: =12
+        Text: ="Filters"
+        Width: =106
+        X: =39
+        Y: =105
+        ZIndex: =37
+
+    IcoFilter As icon.Filter:
+        Color: |-
+            =ColorValue("#55AEE0")
+        Height: =20
+        Icon: =Icon.Filter
+        Width: =36
+        X: =4
+        Y: =111
+        ZIndex: =38
+
+    "ChartGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderStyle: =BorderStyle.None
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =123
+        Items: |-
+            =[{Title: "Total No of Views", Value:1050, Color:"#98E1FF"},{Title: "Total no of unique views", Value:500, Color:"#FFD37C"},{Title: "Total no of shares", Value:50, Color:"#C0FF64"},{Title: "New reports this month", Value:10, Color:"#CDF7F6"},{Title: "New reports this year", Value:30, Color:"#f5cac3"},{Title: "Contributors", Value:11, Color:"#95d5b2"}]
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(ResourceDetail,ScreenTransition.Fade)
+        ShowScrollbar: =false
+        TemplateFill: |-
+            =RGBA(255, 255, 255, 1 )
+            //RGBA(0, 18, 107, 1)
+        TemplatePadding: =16
+        TemplateSize: =97
+        Transition: =Transition.Pop
+        Width: =ReportsGallery.Width
+        WrapCount: =6
+        X: =282
+        Y: =82
+        ZIndex: =39
+
+        Button8 As button:
+            Fill: =ColorValue(ThisItem.Value.Color)
+            Height: =88
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: =""
+            Width: =ReportsGallery.TemplateWidth-10
+            X: =5
+            Y: =5
+            ZIndex: =1
+
+        Label13 As label:
+            Align: =Center
+            Color: =RGBA(0,0,0,1)
+            FontWeight: =Semibold
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Value.Title
+            Width: =131.915
+            X: =(ChartGallery.TemplateWidth / 2) - (Label13.Width / 2)
+            Y: =5
+            ZIndex: =2
+
+        Label14 As label:
+            Align: =Center
+            FontWeight: =Bold
+            Height: =24
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Value.Value
+            Width: =131.915
+            X: =(ChartGallery.TemplateWidth / 2) - (Label14.Width / 2)
+            Y: =(ChartGallery.TemplateHeight / 2) - (Label14.LineHeight / 2) +20
+            ZIndex: =3
+
+    Rectangle11_2 As rectangle:
+        Fill: |-
+            =ColorValue("#323264")
+        Height: =40
+        Visible: =false
+        Width: =260
+        X: =11
+        Y: =689
+        ZIndex: =40
+
+    Button2_2 As button:
+        DisplayMode: =DisplayMode.View
+        Fill: |-
+            =ColorValue("#323264")
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Text: =""
+        Width: =260
+        X: =11
+        Y: =689
+        ZIndex: =41
+
+    Label9_4 As label:
+        Color: |-
+            =ColorValue("#55AEE0")
+        FontWeight: =FontWeight.Semibold
+        Height: =25
+        Size: =10
+        Text: ="New Report"
+        Width: =130
+        X: =89
+        Y: =743
+        ZIndex: =42
+
+    Label9_5 As label:
+        Color: |-
+            =ColorValue("#55AEE0")
+        FontWeight: =FontWeight.Semibold
+        Height: =25
+        Size: =10
+        Text: ="Administration"
+        Width: =130
+        X: =45
+        Y: =699
+        ZIndex: =43
+
+    Icon2 As icon.Add:
+        Color: =RGBA(128, 128, 128, 1)
+        Height: =30
+        Icon: =Icon.Add
+        OnSelect: =NewForm(frmNewReport);  Navigate('NewReport Page',Fade)
+        PaddingRight: =130
+        Width: =178
+        X: =40
+        Y: =738
+        ZIndex: =44
+
+    Label2_5 As label:
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        PaddingRight: =4.50
+        PaddingTop: =4.50
+        Size: =12.60
+        Text: ="Contoso"
+        Width: =162
+        X: =89
+        Y: =28
+        ZIndex: =45
+
+    Image1_5 As image:
+        Height: =62
+        Image: ='bar graph'
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =72.88
+        Y: =13
+        ZIndex: =46
+
+    Icon8 As icon.Manufacture:
+        Color: |-
+            =ColorValue("#55AEE0")
+        Height: =23
+        Icon: =Icon.Manufacture
+        Width: =29
+        X: =13
+        Y: =701
+        ZIndex: =47
+

@@ -1,0 +1,145 @@
+[
+  {
+    "DisplayName": "crfb2_Assets (Views)",
+    "Name": "_crfb2_asset_views",
+    "RelatedEntityName": "crfb2_Assets",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2fdda961-2bcf-45e0-894a-581d39f510cd": "crfb2_Asset Advanced Find View",
+      "6988a74b-8636-4b4c-967f-a32fdb297511": "Inactive crfb2_Assets",
+      "af2a18e0-643c-4b32-b4a2-fbbb0c28faae": "crfb2_Asset Associated View",
+      "b6874616-de42-47aa-9802-813c91130b97": "Active crfb2_Assets",
+      "fedda291-f57a-4f55-93e7-88c7fb0d3083": "crfb2_Asset Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Category",
+    "Name": "connectionrole_category",
+    "OptionSetInfoNameMapping": {
+      "1": "Business",
+      "1000": "Stakeholder",
+      "1001": "Sales Team",
+      "1002": "Service",
+      "2": "Family",
+      "3": "Social",
+      "4": "Sales",
+      "5": "Other"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crfb2_executionmode",
+        "OptionSetReferenceEntityName": "crfb2_Assets"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "crfb2_executionmode",
+    "RelatedEntityName": "crfb2_Assets",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crfb2_assets",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crfb2_asset",
+    "MaxGetRowsCount": 2000,
+    "Name": "crfb2_Assets",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crfb2_asset_AsyncOperations": "System Jobs",
+      "crfb2_asset_BulkDeleteFailures": "Bulk Delete Failures",
+      "crfb2_asset_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crfb2_asset_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crfb2_asset_ProcessSession": "Process Sessions",
+      "crfb2_asset_SyncErrors": "Sync Errors",
+      "crfb2_assetid": "crfb2_Asset",
+      "crfb2_assettype": "AssetType",
+      "crfb2_AssetType1": "Asset Type1",
+      "crfb2_Audience": "Audience",
+      "crfb2_businessowner": "Business Owner",
+      "crfb2_createddate": "Created Date",
+      "crfb2_departments": "Departments",
+      "crfb2_description": "Description",
+      "crfb2_executionmode": "Execution Mode",
+      "crfb2_images": "Images",
+      "crfb2_images1": "Images1",
+      "crfb2_images1id": "crfb2_Images1Id",
+      "crfb2_powerappsid": "PowerAppsId",
+      "crfb2_ratings": "Ratings",
+      "crfb2_Region": "Region ",
+      "crfb2_reportcreatedby": "Report Created By",
+      "crfb2_reportdisplayname": "Report Display Name",
+      "crfb2_reportname": "Report Name",
+      "crfb2_sensitivity": "Sensitivity",
+      "crfb2_sensitivitylevel": "Sensitivity Level",
+      "crfb2_tags": "Tags",
+      "crfb2_technicalowner": "Technical Owner",
+      "crfb2_title": "Title",
+      "crfb2_url": "URL",
+      "crfb2_views": "Views",
+      "crfb2_weblink": "Web Link",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "crfb2_Assets",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Status (crfb2_Assets)",
+    "Name": "crfb2_asset_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "crfb2_Assets"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "crfb2_Assets",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (crfb2_Assets)",
+    "Name": "crfb2_asset_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "crfb2_Assets"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "crfb2_Assets",
+    "Type": "OptionSetInfo"
+  }
+]
