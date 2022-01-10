@@ -18,7 +18,7 @@ CategoryPage As screen:
         RadiusTopLeft: =30  
         RadiusTopRight: =30  
         Size: =18
-        Text: ="Finance"
+        Text: ="Finance 1"
         Width: =177
         X: =182
         Y: =235
