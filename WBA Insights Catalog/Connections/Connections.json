@@ -1,0 +1,212 @@
+{
+  "082d2f46-8670-40df-b47b-665e6b8bfb84": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365/connections/ada189fbe13148dea741775389e8b018",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1538/1.0.1538.2621/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "082d2f46-8670-40df-b47b-665e6b8bfb84"
+  },
+  "259108aa-050c-46bb-b6b2-01252fcbbb48": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/03566d65e647445a9dcbc292d96d83f7",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "57547497-dba4-49b3-b05e-873e42c88fc7"
+    ],
+    "id": "259108aa-050c-46bb-b6b2-01252fcbbb48"
+  },
+  "57547497-dba4-49b3-b05e-873e42c88fc7": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/e21ba6fdc7ad41ca91fe3aa5c53fb724",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1542/1.0.1542.2635/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "259108aa-050c-46bb-b6b2-01252fcbbb48": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "259108aa-050c-46bb-b6b2-01252fcbbb48"
+        }
+      }
+    },
+    "datasets": {
+      "b!Faz-zTtLAkaxIHt8kF5xF45ojabxyORGqimkRwCdkax-JRitmKXNSrqqgGMZWTFZ.015HO7KWX62R5ZFTDDRNDIPCBZYXG4ZCGJ": {
+        "dataSources": {
+          "FinancialChart": {
+            "tableName": "FinancialChart"
+          },
+          "RecentlyOpen": {
+            "tableName": "RecentlyOpen"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "RecentlyOpen",
+      "FinancialChart"
+    ],
+    "dependencies": {
+      "fileSource": "259108aa-050c-46bb-b6b2-01252fcbbb48"
+    },
+    "dependents": [],
+    "id": "57547497-dba4-49b3-b05e-873e42c88fc7"
+  },
+  "614aeedf-16b6-4984-83ea-6392317b8b41": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/685e1687893a42479af822e7e79408c7",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1542/1.0.1542.2635/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "a17d2a9f-1905-4281-970c-3d5ba71741f5": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "a17d2a9f-1905-4281-970c-3d5ba71741f5"
+        }
+      }
+    },
+    "datasets": {
+      "b!Faz-zTtLAkaxIHt8kF5xF45ojabxyORGqimkRwCdkax-JRitmKXNSrqqgGMZWTFZ.015HO7KWX62R5ZFTDDRNDIPCBZYXG4ZCGJ": {
+        "dataSources": {
+          "Trending": {
+            "tableName": "Trending"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Trending"
+    ],
+    "dependencies": {
+      "fileSource": "a17d2a9f-1905-4281-970c-3d5ba71741f5"
+    },
+    "dependents": [],
+    "id": "614aeedf-16b6-4984-83ea-6392317b8b41"
+  },
+  "651511fb-7ae1-406c-9682-9c4255889475": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/8cc40c78ddfe49cbb2b963e9c6b0e5a8",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1542/1.0.1542.2635/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "651511fb-7ae1-406c-9682-9c4255889475"
+  },
+  "81095c13-630b-44ad-aa19-bcea3aae7005": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/2ef1a0477df14c1c898bbdca64660d0e",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1542/1.0.1542.2635/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "a17d2a9f-1905-4281-970c-3d5ba71741f5": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "a17d2a9f-1905-4281-970c-3d5ba71741f5"
+        }
+      }
+    },
+    "datasets": {
+      "b!Faz-zTtLAkaxIHt8kF5xF45ojabxyORGqimkRwCdkax-JRitmKXNSrqqgGMZWTFZ.015HO7KWX62R5ZFTDDRNDIPCBZYXG4ZCGJ": {
+        "dataSources": {
+          "Finance": {
+            "tableName": "Finance"
+          },
+          "Sales": {
+            "tableName": "Sales"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Finance",
+      "Sales"
+    ],
+    "dependencies": {
+      "fileSource": "a17d2a9f-1905-4281-970c-3d5ba71741f5"
+    },
+    "dependents": [],
+    "id": "81095c13-630b-44ad-aa19-bcea3aae7005"
+  },
+  "a17d2a9f-1905-4281-970c-3d5ba71741f5": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/e4c82ae33b954f199620eaba0880b46f",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1528/1.0.1528.2589/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "81095c13-630b-44ad-aa19-bcea3aae7005",
+      "614aeedf-16b6-4984-83ea-6392317b8b41"
+    ],
+    "id": "a17d2a9f-1905-4281-970c-3d5ba71741f5"
+  }
+}

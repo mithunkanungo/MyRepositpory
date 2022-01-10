@@ -1,0 +1,13 @@
+<svg id="Administrator" xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 125 125">
+  <g id="Ellipse_25" data-name="Ellipse 25" fill="none" stroke="#399fd7" stroke-width="7">
+    <circle cx="62.5" cy="62.5" r="62.5" stroke="none"/>
+    <circle cx="62.5" cy="62.5" r="59" fill="none"/>
+  </g>
+  <g id="Group_113" data-name="Group 113" transform="translate(-1053 -469)">
+    <g id="Icon_feather-user-plus" data-name="Icon feather-user-plus" transform="translate(1084.5 502.068)">
+      <path id="Path_59" data-name="Path 59" d="M49.19,41.576V35.217A12.717,12.717,0,0,0,36.473,22.5H14.217A12.717,12.717,0,0,0,1.5,35.217v6.359" transform="translate(0 20.152)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      <path id="Path_60" data-name="Path 60" d="M32.185,17.217A12.717,12.717,0,1,1,19.467,4.5,12.717,12.717,0,0,1,32.185,17.217Z" transform="translate(5.878)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    </g>
+    <path id="Icon_feather-key" data-name="Icon feather-key" d="M31.229,3,28.258,5.972M16.951,17.278a8.172,8.172,0,1,1-11.557,0,8.171,8.171,0,0,1,11.557,0Zm0,0,6.106-6.106m0,0L27.5,17.278,34.5,9.807,28.258,5.972m-5.2,5.2,5.2-5.2" transform="translate(1125.689 510)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

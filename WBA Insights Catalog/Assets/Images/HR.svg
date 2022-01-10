@@ -1,0 +1,10 @@
+<svg id="HR" xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 125 125">
+  <g id="Ellipse_26" data-name="Ellipse 26" fill="none" stroke="#399fd7" stroke-width="7">
+    <circle cx="62.5" cy="62.5" r="62.5" stroke="none"/>
+    <circle cx="62.5" cy="62.5" r="59" fill="none"/>
+  </g>
+  <path id="Path_61" data-name="Path 61" d="M40.969,38.287V33.025A10.525,10.525,0,0,0,30.444,22.5H12.025A10.525,10.525,0,0,0,1.5,33.025v5.262" transform="translate(37.1 50.713)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" opacity="0.8"/>
+  <path id="Path_62" data-name="Path 62" d="M27.8,15.025A10.525,10.525,0,1,1,17.275,4.5,10.525,10.525,0,0,1,27.8,15.025Z" transform="translate(41.06 37.138)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" opacity="0.8"/>
+  <path id="Path_63" data-name="Path 63" d="M30,12V27.787" transform="translate(58.594 42.794)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" opacity="0.8"/>
+  <path id="Path_64" data-name="Path 64" d="M41.287,16.5H25.5" transform="translate(55.2 46.188)" fill="none" stroke="#8bba29" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" opacity="0.8"/>
+</svg>

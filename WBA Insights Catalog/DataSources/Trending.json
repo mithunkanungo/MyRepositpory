@@ -1,0 +1,28 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2021-11-04T16:35:38.4520000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "AssetType": "AssetType",
+      "CreatedDate": "CreatedDate",
+      "Departments": "Departments",
+      "Description_x0020_": "Description ",
+      "Images": "Images",
+      "Ratings": "Ratings",
+      "Sensitivity": "Sensitivity",
+      "Title": "Title",
+      "Views": "Views"
+    },
+    "DatasetName": "b!Faz-zTtLAkaxIHt8kF5xF45ojabxyORGqimkRwCdkax-JRitmKXNSrqqgGMZWTFZ.015HO7KWX62R5ZFTDDRNDIPCBZYXG4ZCGJ",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Trending",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

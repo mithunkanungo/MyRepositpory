@@ -1,0 +1,75 @@
+SubCategoryPage As screen:
+
+    Rectangle1_1 As rectangle:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =735
+        Width: =1186
+        X: =21
+        Y: =15
+        ZIndex: =1
+
+    btnFinance_1 As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        OnSelect: =Navigate(Home,ScreenTransition.Fade)
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Purchase"
+        Width: =177
+        X: =362
+        Y: =235
+        ZIndex: =2
+
+    btnSales1_1 As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Customer"
+        Width: =177
+        X: =570
+        Y: =235
+        ZIndex: =3
+
+    btnMarketing_1 As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Audit"
+        Width: =177
+        X: =778
+        Y: =235
+        ZIndex: =4
+
+    Image1_1 As image:
+        Image: =logo
+        OnSelect: =Navigate(Home,ScreenTransition.Fade)
+        X: =21
+        Y: =15
+        ZIndex: =6
+
+    Label5_1 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =58
+        Size: =24
+        Text: ="Choose Sub-Category "
+        Underline: =true
+        Width: =354
+        X: =455
+        Y: =137
+        ZIndex: =7
+

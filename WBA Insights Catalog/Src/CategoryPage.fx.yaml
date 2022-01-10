@@ -1,0 +1,101 @@
+CategoryPage As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =735
+        Width: =1186
+        X: =21
+        Y: =15
+        ZIndex: =1
+
+    btnFinance As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        OnSelect: =Navigate(SubCategoryPage,ScreenTransition.Fade)
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Finance"
+        Width: =177
+        X: =182
+        Y: =235
+        ZIndex: =2
+
+    btnSales1 As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Sales"
+        Width: =177
+        X: =390
+        Y: =235
+        ZIndex: =3
+
+    btnMarketing As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Marketing"
+        Width: =177
+        X: =598
+        Y: =235
+        ZIndex: =4
+
+    btnAdmin As button:
+        Fill: =RGBA(38, 38, 33, 1)
+        Font: =Font.'Segoe UI'
+        Height: =149
+        RadiusBottomLeft: =30  
+        RadiusBottomRight: =30  
+        RadiusTopLeft: =30  
+        RadiusTopRight: =30  
+        Size: =18
+        Text: ="Admin"
+        Width: =177
+        X: =809
+        Y: =235
+        ZIndex: =5
+
+    Image1 As image:
+        Image: =logo
+        X: =21
+        Y: =15
+        ZIndex: =6
+
+    Label5 As label:
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =58
+        Size: =24
+        Text: ="Choose Category "
+        Underline: =true
+        Width: =266
+        X: =455
+        Y: =137
+        ZIndex: =7
+
+    Button5 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =46
+        Text: ="Manage Categories"
+        Underline: =true
+        Width: =206
+        X: =504
+        Y: =431
+        ZIndex: =8
+

@@ -1,0 +1,10 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =Set(RowItems,5);
+        Set(IsMenuVisible,true);
+        Set(ShowExpand,true);
+        Set(List1 ,["Red","Blue","Yellow"]);
+        
+    StartScreen: =CategoryPage
+
