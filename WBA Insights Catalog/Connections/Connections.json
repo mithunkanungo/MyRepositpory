@@ -1,6 +1,6 @@
 {
   "082d2f46-8670-40df-b47b-665e6b8bfb84": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365/connections/ada189fbe13148dea741775389e8b018",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365/connections/3c742cbc2fb64606b7325d029d704d0c",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -21,7 +21,7 @@
     "id": "082d2f46-8670-40df-b47b-665e6b8bfb84"
   },
   "259108aa-050c-46bb-b6b2-01252fcbbb48": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/03566d65e647445a9dcbc292d96d83f7",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/28147652a98f45f29060a170a2481c2f",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -42,7 +42,7 @@
     "id": "259108aa-050c-46bb-b6b2-01252fcbbb48"
   },
   "57547497-dba4-49b3-b05e-873e42c88fc7": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/e21ba6fdc7ad41ca91fe3aa5c53fb724",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/476a828791ed413baecaddd29d0fdd8c",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -85,7 +85,7 @@
     "id": "57547497-dba4-49b3-b05e-873e42c88fc7"
   },
   "614aeedf-16b6-4984-83ea-6392317b8b41": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/685e1687893a42479af822e7e79408c7",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/342823e4475a4d3282db3c7ade9c808d",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -124,7 +124,7 @@
     "id": "614aeedf-16b6-4984-83ea-6392317b8b41"
   },
   "651511fb-7ae1-406c-9682-9c4255889475": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/8cc40c78ddfe49cbb2b963e9c6b0e5a8",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/a76059cf985849d1ba4932b47d28c6dd",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -145,7 +145,7 @@
     "id": "651511fb-7ae1-406c-9682-9c4255889475"
   },
   "81095c13-630b-44ad-aa19-bcea3aae7005": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/2ef1a0477df14c1c898bbdca64660d0e",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/10bffab9825443f6963b4cebcaf8a37a",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -188,7 +188,7 @@
     "id": "81095c13-630b-44ad-aa19-bcea3aae7005"
   },
   "a17d2a9f-1905-4281-970c-3d5ba71741f5": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/e4c82ae33b954f199620eaba0880b46f",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/8a8c4b2ba69c47afa9467e1f7640fbff",
     "connectionParameters": {
       "sku": "Enterprise"
     },
